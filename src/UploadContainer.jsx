@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const UploadContainer = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
     const [uploading, setUploading] = useState(false);
     const [showImageContainer, setShowImageContainer] = useState(false);
+    const fileInputRef = useRef(null);
+    
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -29,6 +31,7 @@ const UploadContainer = () => {
         setSelectedFile(null);
         setPreviewUrl(null);
         setShowImageContainer(false);
+        fileInputRef.current.value = ''; // Reset the file input
     };
 
     return (
@@ -88,6 +91,7 @@ const UploadContainer = () => {
                             accept="image/*"
                             className="hidden"
                             onChange={handleFileChange}
+                            ref={fileInputRef}
                         />
                     </label>
                 </div>
