@@ -4,7 +4,7 @@ import UploadContainer from './UploadContainer'
 
 
 const App = () => (
-  <div className='flex border border-blue-400 h-[500px] justify-between font-family:Jost '>
+  <div className='flex border border-blue-400 h-[500px] justify-between font-family:Jost mt-[40px]'>
     <div className='flex justify-center items-center flex-col borde border-blue-400 w-[900px]  '>
       <h1 className='text-6xl font-bold underline decoration-yellow-300 decoration-[15px]'>Face Detection Engine</h1>
       <p className='text-2xl mt-[50px]'>UPLOAD PHOTO AND DETECT FACES IN AN IMAGE </p>
