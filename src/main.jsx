@@ -7,6 +7,7 @@ import Test from './Test.jsx'
 import UploadContainer from './UploadContainer.jsx'
 import NavbarTest from './NavbarTest.jsx'
 import About from './About.jsx'
+import Faq from './Faq.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -15,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <NavbarTest /> */}
     <App />
     <About />
-    <Test />
+    <Faq />
+    {/* <Test /> */}
     {/* <UploadContainer /> */}
   </React.StrictMode>,
 )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Test = () => {
+const Faq = () => {
   const faqData = [
     {
       question: 'Question 1',
@@ -80,4 +80,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Faq;

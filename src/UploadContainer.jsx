@@ -45,7 +45,7 @@ const UploadContainer = () => {
         </div>
       )} */}
             {showImageContainer && (
-                <div className="absolute inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 backdrop-blur-md  ">
+                <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 backdrop-blur-md  ">
                     <div className="bg-white p-4 rounded-lg text-center w-[632px] h-[456px]">
                         <img
                             src={previewUrl}
