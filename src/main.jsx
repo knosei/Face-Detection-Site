@@ -6,6 +6,7 @@ import Header from './Header.jsx'
 import Test from './Test.jsx'
 import UploadContainer from './UploadContainer.jsx'
 import NavbarTest from './NavbarTest.jsx'
+import About from './About.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,7 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Header />
     {/* <NavbarTest /> */}
     <App />
-    {/* <Test /> */}
+    <About />
+    <Test />
     {/* <UploadContainer /> */}
   </React.StrictMode>,
 )

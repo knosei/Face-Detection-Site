@@ -21,7 +21,7 @@ const Header = () => {
   }, [prevScrollPos]);
 
   return (
-    <nav className={`flex justify-between items-center bg-gray-800 text-white p-4 fixed top-0 left-0 right-0 z-50
+    <nav className={`flex justify-between items-center bg-blue-700 text-white p-4 fixed top-0 left-0 right-0 z-50
     transform transition-transform ${visible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       <div className="flex items-center">
