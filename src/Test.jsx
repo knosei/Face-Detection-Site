@@ -4,29 +4,16 @@ const Test = () => {
   const faqData = [
     {
       question: 'Question 1',
-      answer:
-        'Answer to Question 1',
+      answer: 'Answer to Question 1',
     },
     {
       question: 'Question 2',
-      answer:
-        'Answer to Question 2',
+      answer: 'Answer to Question 2',
     },
     {
       question: 'Question 3',
-      answer:
-        'Answer to Question 3',
+      answer: 'Answer to Question 3',
     },
-    {
-        question: 'Question 4',
-        answer:
-          'Answer to Question 4',
-    },
-    {
-        question: 'Question 5',
-        answer:
-          'Answer to Question 5',
-    }
     // Add more FAQ data as needed
   ];
 
@@ -39,7 +26,7 @@ const Test = () => {
   return (
     <div className="bg-gray-100 py-8">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto sm:max-w-none">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqData.map((item, index) => (
@@ -60,12 +47,7 @@ const Test = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
                 {index === activeIndex && (
