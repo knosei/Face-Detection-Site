@@ -14,10 +14,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
     {/* <NavbarTest /> */}
-    {/* <App /> */}
-    <About />
+    <App />
+    {/* <About /> */}
     <Test />
-    <Faq />
+    {/* <Faq /> */}
     
     {/* <UploadContainer /> */}
   </React.StrictMode>,

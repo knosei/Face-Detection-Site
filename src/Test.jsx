@@ -10,20 +10,20 @@ const UploadContainer = () => {
   const [string, setString] = useState("")
   const canvasRef = useRef();
 
-  const drawRectangle = (dim, scale) => {
-    const context = canvasRef.current.getContext("2d");
-    context.strokeStyle = "black";
-    context.lineWidth = 1;
-    const width = (dim[2] - dim[0]) * scale.x_scale
-    const height = (dim[3] - dim[1]) * scale.y_scale
-    console.log(width)
-    console.log(height)
-    console.log(dim[2] * scale.x_scale)
-    console.log(dim[3] * scale.y_scale)
-    // context.strokeRect(dim[2] * scale.x_scale, dim[3] * scale.y_scale, width, height);
-    context.strokeRect(10, 10, 200, 200);
+  // const drawRectangle = (dim, scale) => {
+  //   const context = canvasRef.current.getContext("2d");
+  //   context.strokeStyle = "black";
+  //   context.lineWidth = 1;
+  //   const width = (dim[2] - dim[0]) * scale.x_scale
+  //   const height = (dim[3] - dim[1]) * scale.y_scale
+  //   console.log(width)
+  //   console.log(height)
+  //   console.log(dim[2] * scale.x_scale)
+  //   console.log(dim[3] * scale.y_scale)
+  //   // context.strokeRect(dim[2] * scale.x_scale, dim[3] * scale.y_scale, width, height);
+  //   context.strokeRect(10, 10, 200, 200);
 
-  };
+  // };
 
 
   const handleFileChange = (event) => {
@@ -32,15 +32,15 @@ const UploadContainer = () => {
     setPreviewUrl(URL.createObjectURL(file));
     setShowImageContainer(true);
     setUploading(true);
-    const context = canvasRef.current.getContext("2d");
-    ctx.drawImage(previewUrl, 0, 0, 300, 200);
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-      let image = new Image()
-      image.src = image.src = e.target.result
-      await image.decode()
-      setMetadata({ width: image.width, height: image.height })
-    }
+    // const context = canvasRef.current.getContext("2d");
+    // ctx.drawImage(previewUrl, 0, 0, 300, 200);
+    // const reader = new FileReader();
+    // reader.onload = async (e) => {
+    //   let image = new Image()
+    //   image.src = image.src = e.target.result
+    //   await image.decode()
+    //   setMetadata({ width: image.width, height: image.height })
+    // }
     reader.onloadend = () => {
       // `reader.result` contains the base64 string of the uploaded image
       setString(reader.result);
@@ -131,20 +131,21 @@ const UploadContainer = () => {
       {showImageContainer && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 backdrop-blur-md  ">
           <div className="bg-white p-4 rounded-lg text-center w-[652px] h-[510px] flex flex-col">
-            <canvas
+            {/* <canvas
               ref={canvasRef}
               style={{
                 width: "600px",
                 height: "400px",
 
               }}
-            />
-            {/* <img
+            /> */}
+            <img
               src={previewUrl}
               alt="Uploaded Image"
-              className="w-2/3 h-[400px] mx-auto mb-4  "
-            /> */}
+              className="w-[600px] h-[400px] mx-auto mb-4  "
+            />
             <p className="text-gray-600 mb-2">Image uploaded successfully!</p>
+            <p className="text-gray-600 mb-2">{`Number of faces: ${previewUrl} `}</p>
             <div className="flex justify-center">
               <button
                 onClick={handleProceed}
