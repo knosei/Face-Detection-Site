@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <NavbarTest /> */}
     <App />
     {/* <About /> */}
-    <Test />
+    {/* <Test /> */}
     {/* <Faq /> */}
     
     {/* <UploadContainer /> */}
